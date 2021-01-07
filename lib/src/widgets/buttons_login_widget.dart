@@ -25,7 +25,7 @@ class ButtonLogin extends StatelessWidget {
         height: 40,
         child: Center(child: Text(this.text, style: TextStyle(color: Colors.white))),
       ),
-      onTap: ()=>this.onTap,
+      onTap: this.onTap,
     );
   }
 }
