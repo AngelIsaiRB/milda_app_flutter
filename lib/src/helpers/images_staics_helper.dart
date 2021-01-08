@@ -1,3 +1,5 @@
+import 'package:m_app/src/models/perfil_swipe_model.dart';
+
 final imagesHelper=[
   "https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg",
   "https://definicionde.es/wp-content/uploads/2019/04/definicion-de-persona-min.jpg",
@@ -26,3 +28,29 @@ final imagesLifeStyleHelper= [
   "https://res.cloudinary.com/angelisai/image/upload/v1610079216/m_app/bw6zipdkaod2t1nw7o9u.png",
 ];
 
+final List<ProfileSwipe> demoProfiles = [
+  new ProfileSwipe(
+    photos: [
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Emilia_Clarke_--_Dom_Hemingway_07.jpg/731px-Emilia_Clarke_--_Dom_Hemingway_07.jpg",
+      "https://upload.wikimedia.org/wikipedia/commons/5/57/Emilia_Clarke_by_Gage_Skidmore_3.jpg",      
+    ],
+    name: "Daenerys Targaryen",
+    bio: "Is your name winter? Because you'll be coming soon.",
+  ),
+  new ProfileSwipe(
+    photos: [
+      "https://concepto.de/wp-content/uploads/2018/08/persona-e1533759204552.jpg",
+    ],
+    name: "Juan Algo",
+    bio: "esto es un subtitle",
+  ),
+  new ProfileSwipe(
+    photos: [
+      "https://www.sabervivirtv.com/medio/2019/02/01/altamente-sensible_4713542c_990x586.jpg",
+       "https://cdn.pixabay.com/photo/2015/07/30/11/26/joelle-anne-schmitz-867432_960_720.jpg",
+      
+    ],
+    name: "Pancha",
+    bio: "Is ",
+  ),
+];
