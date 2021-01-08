@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:m_app/src/helpers/images_staics_helper.dart';
 import 'package:m_app/src/widgets/Carrousel_images_widget.dart';
+import 'package:m_app/src/widgets/appBar_custom_widget.dart';
 import 'package:m_app/src/widgets/image_principal_widget.dart';
 
 
@@ -13,9 +14,7 @@ class HomePage extends StatelessWidget {
     
     return Scaffold(
       // backgroundColor: Colors.black,
-      appBar: AppBar(
-
-      ),
+      appBar: CustomAppBar(),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Column(
