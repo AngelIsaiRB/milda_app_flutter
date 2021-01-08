@@ -32,13 +32,25 @@ class _TinderSwipeCardState extends State<TinderSwipeCard> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              RoundIconButton.small(
-                icon: Icons.refresh,
-                iconColor: Colors.orange,
-                onPressed: () {
-                  print("refresh");
+              GestureDetector(
+                onTap: () {
+                  print("3Stars");
                 },
-              ),
+            child: Container(
+              height: 56,
+              width: 56,
+              child: Image(
+                image: AssetImage("assets/estrellasME.png"),
+                fit: BoxFit.cover,
+                ),
+              ),),
+              // RoundIconButton.small(
+              //   icon: Icons.refresh,
+              //   iconColor: Colors.orange,
+              //   onPressed: () {
+              //     print("refresh");
+              //   },
+              // ),
               RoundIconButton.large(
                 icon: Icons.clear,
                 iconColor: Colors.red,
@@ -47,14 +59,28 @@ class _TinderSwipeCardState extends State<TinderSwipeCard> {
                   matchEngine.cycleMatch();
                 },
               ),
-              RoundIconButton.small(
-                icon: Icons.star,
-                iconColor: Colors.blue,
-                onPressed: () {
-                  matchEngine.currentMatch.superLike();
+              GestureDetector(
+                onTap: () {
+                  print("super");
+                   matchEngine.currentMatch.superLike();
                   matchEngine.cycleMatch();
                 },
-              ),
+            child: Container(
+              height: 56,
+              width: 56,
+              child: Image(
+                image: AssetImage("assets/SuperMildaR.png"),
+                fit: BoxFit.cover,
+                ),
+              ),),
+              // RoundIconButton.small(
+              //   icon: Icons.star,
+              //   iconColor: Colors.blue,
+              //   onPressed: () {
+              //     matchEngine.currentMatch.superLike();
+              //     matchEngine.cycleMatch();
+              //   },
+              // ),
               RoundIconButton.large(
                 icon: Icons.favorite,
                 iconColor: Colors.green,
