@@ -11,6 +11,13 @@ final imagesHelper=[
   "https://pymstatic.com/10945/conversions/personas-intuitivas-thumb.jpg",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWJH5oudO9ulfuv1xJO30TvER5vgcge_Bpdw&usqp=CAU"
 ];
+
+final imagesPubliciti=[
+  "assets/Tarjeta_BeTop.png",
+  "assets/Tarjeta_Bot.png",
+  "assets/Tarjeta_Star.png",
+  "assets/Tarjeta_SuperMilda.png",
+];
 final imagesApparelHelper=[
   "https://res.cloudinary.com/angelisai/image/upload/v1610078970/m_app/oqgkf4tkzcxjr3ib7xaj.png",
   "https://res.cloudinary.com/angelisai/image/upload/v1610078970/m_app/uhrifxrmuw4wd5nnuwyy.png",
@@ -34,8 +41,8 @@ final List<ProfileSwipe> demoProfiles = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Emilia_Clarke_--_Dom_Hemingway_07.jpg/731px-Emilia_Clarke_--_Dom_Hemingway_07.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/5/57/Emilia_Clarke_by_Gage_Skidmore_3.jpg",      
     ],
-    name: "Daenerys Targaryen",
-    bio: "Is your name winter? Because you'll be coming soon.",
+    name: "emilia clark",
+    bio: "32 años",
   ),
   new ProfileSwipe(
     photos: [

@@ -95,7 +95,7 @@ class LoginEmailPasswordPage extends StatelessWidget {
                   onTap: (){
                     Navigator.of(context).pushNamed("registerBasicInformation");
                   },
-                  child: Text("¿Registrarse?", style: TextStyle(color: Colors.white),),
+                  child: Text("Registrarse", style: TextStyle(color: Colors.white),),
                 )
               ],
             ),

@@ -29,7 +29,9 @@ class _CustomAppBarState extends State<CustomAppBar>{
           ],
          leading: IconButton(              
               icon: FaIcon(FontAwesomeIcons.userAlt, size: 30,), 
-              onPressed: (){}),
+              onPressed: (){               
+                Navigator.of(context).pushNamed("perfilPage");
+              }),
       );
     }
 }
