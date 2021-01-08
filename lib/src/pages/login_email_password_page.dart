@@ -78,7 +78,9 @@ class LoginEmailPasswordPage extends StatelessWidget {
           ButtonLogin(
               color: Color.fromRGBO(229, 32, 32, 1),
               text: "Login",
-              onTap: (){},
+              onTap: (){
+                Navigator.of(context).pushNamed("homePage");
+              },
             ),
           Container(
             margin: EdgeInsets.symmetric(vertical: 20),
