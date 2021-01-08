@@ -1,5 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:m_app/src/widgets/buttons_login_widget.dart';
+import 'package:m_app/src/widgets/custom_textfield_widget.dart';
 
 class LoginEmailPasswordPage extends StatelessWidget {
   @override
@@ -25,7 +27,7 @@ class LoginEmailPasswordPage extends StatelessWidget {
                  width: 200,
                  ),            
               ),
-            contain(),
+            contain(context),
                 Container(
                 height:200,
               ),
@@ -36,7 +38,7 @@ class LoginEmailPasswordPage extends StatelessWidget {
     ); 
   }
 
-  Widget contain(){
+  Widget contain(BuildContext context){
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 20),
       child: Column(
@@ -49,22 +51,13 @@ class LoginEmailPasswordPage extends StatelessWidget {
               color: Color.fromRGBO(236, 240, 241, 1),
               borderRadius: BorderRadius.circular(10),
             ),
-            child: TextField(                        
-              keyboardType: TextInputType.emailAddress,        
-              decoration: InputDecoration(                 
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color:Colors.transparent)
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color:Colors.transparent)
-                ),                
-                focusColor: Colors.black,                
-                // hintText: "ejemplo@correo.com",
-                hintText: "Email",  
-
-              ),
-              onChanged: (value){print(value);},        
-            ),
+            child: CustomTextField(
+              text: "Email",
+              
+              onChange: (valor){
+                print(valor);
+              },
+            )
           ),
           Container(height: 20,),
           Container(
@@ -72,21 +65,14 @@ class LoginEmailPasswordPage extends StatelessWidget {
               color: Color.fromRGBO(236, 240, 241, 1),
               borderRadius: BorderRadius.circular(10),
             ),
-            child: TextField(          
-              keyboardType: TextInputType.emailAddress,        
-              decoration: InputDecoration(      
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color:Colors.transparent)
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color:Colors.transparent)
-                ),                
-                focusColor: Colors.black,                
-                // hintText: "ejemplo@correo.com",
-                hintText: "Password",         
-              ),
-              onChanged: (value){print(value);},        
-            ),
+            child: CustomTextField(
+              textType: TextInputType.visiblePassword,
+              obscureText: true,
+              text: "Password",
+              onChange: (valor){
+                print(valor);
+              },
+            )
           ),
             Container(height: 20,),
           ButtonLogin(
@@ -104,7 +90,9 @@ class LoginEmailPasswordPage extends StatelessWidget {
                   child: Text("¿Recuperar contraseña?", style: TextStyle(color: Colors.white),),
                 ),
                 GestureDetector(
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.of(context).pushNamed("registerBasicInformation");
+                  },
                   child: Text("¿Registrarse?", style: TextStyle(color: Colors.white),),
                 )
               ],
